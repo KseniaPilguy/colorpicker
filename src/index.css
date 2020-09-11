@@ -1,13 +1,206 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e4e0df;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.colorPicker {
+  width: 280px;
+  height: 45px;
+  border: 1px solid #d2d1d3;
+  background-color: #ffffff;
+}
+
+.hex-code {
+  color: #9c9c9c;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 0 15px;
+}
+
+.colorPicker_palete {
+  position: relative;
+  width: 50px;
+  border-left: 1px solid #d2d1d3;
+}
+.colorPicker_palete .palete {
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
+  position: relative;
+}
+.colorPicker_palete .colorPicker_slider {
+  width: 225px;
+  position: absolute;
+  top: 145%;
+  right: -12%;
+}
+.buttons {
+  padding-bottom: 10px;
+}
+.cancel {
+  background-color: #d1d2d4;
+  border: 1px solid #d2d1d3;
+  color: #9fa0a2;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.open {
+  background-color: #6ba559;
+  border: 1px solid #d2d1d3;
+  text-transform: uppercase;
+  color: #d4e7ce;
+  margin: 0 11px 0 8px;
+  font-size: 15px;
+}
+
+.colorPicker_standart {
+  position: relative;
+  height: 43px;
+  width: 50px;
+  border-left: 1px solid #d2d1d3;
+}
+.colorPicker_standart button {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  background-image: url("./img/iconarrow.png");
+}
+.handpicked-colors {
+  position: absolute;
+  top: 148%;
+  right: -3%;
+}
+.handpicked-colors::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 11px solid #ffffff;
+}
+
+.color_list {
+  padding: 0;
+  width: 202px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: -2px 7px 13px 1px #b4adbc;
+  margin-bottom: 0;
+}
+.color_item {
+  list-style: none;
+  position: relative;
+  padding: 6px 0;
+  border-bottom: 0.3px solid #d2d1d31f;
+}
+.color_item:last-child {
+  margin-bottom: 0px;
+}
+.color_item:hover {
+  background-color: #3377b6;
+  cursor: pointer;
+}
+.color_item:hover p {
+  color: #d4dbdf;
+}
+
+.color_item p {
+  text-transform: uppercase;
+  color: #9c9c9c;
+  font-weight: 600;
+  margin: 0 0 0 20px;
+}
+.color_item_block {
+  position: absolute;
+  right: 16px;
+  width: 17px;
+  height: 17px;
+}
+
+.colors-palette {
+  position: relative;
+  padding-top: 5px;
+  background-color: #ffffff;
+  box-shadow: -2px 7px 13px 1px #b4adbc;
+  border-radius: 5px;
+}
+
+.colors-palette::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 11px solid #ffffff;
+}
+.color-element {
+  margin-bottom: 10px;
+}
+.color-element label {
+  margin: 0 8px 0 0;
+  color: #9c9c9c;
+}
+.color-element input {
+  -webkit-appearance: none;
+  width: 175px;
+  height: 0.15rem;
+}
+.color-element input::-webkit-slider-thumb {
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #999999;
+}
+#red {
+  background: linear-gradient(to left, #ff0000, #535353);
+}
+#blue {
+  background: linear-gradient(to left, #0000ff, #535353);
+}
+#green {
+  background: linear-gradient(to left, #00ff00, #535353);
+}
+button,
+input,
+button:active,
+input:active,
+button:focus,
+input:focus {
+  outline: none;
+  cursor: pointer;
+}
+div {
+  outline: none;
 }
